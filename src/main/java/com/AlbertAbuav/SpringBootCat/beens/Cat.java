@@ -21,14 +21,17 @@ import javax.persistence.*;
 public class Cat {
 
     @Id // ==> (JPA) Will make id primary key
-    @GeneratedValue  // ==> (JPA) Will make id auto increment
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // ==> (JPA) Will make id auto increment
     private int id;
 
     @Column(nullable = false)  // ==> Define the column as not null
     private String name;
 
-    @Column(name = "cat_weigh", nullable = false)  // ==> Will define the name of the column to be "cat_weight" and not null
+    @Column(name = "cat_weight", nullable = false)  // ==> Will define the name of the column to be "cat_weight" and not null
     private float weight;
+
+    @OneToOne  // ==> One Cat have one Chip
+    private Chip chip;
 
     public Cat(String name, float weight) {
         this.name = name;
