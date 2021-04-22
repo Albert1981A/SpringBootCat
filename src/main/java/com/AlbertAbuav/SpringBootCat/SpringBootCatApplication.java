@@ -18,7 +18,7 @@ public class SpringBootCatApplication {
 		System.out.println("Ioc Container was loaded!");
 		System.out.println();
 
-		// 2:12
+
 
 	}
 

@@ -27,6 +27,23 @@ public interface CatRepository extends JpaRepository<Cat, Integer> {
 
     List<Cat> findByWeightLessThan(float weight);
 
+    /*
+    JPA SMART Keywords:
+And	==>	findByLastnameAndFirstname
+Or ==>	findByLastnameOrFirstname
+Between	==>	findByStartDateBetween
+LessThan ==>	findByAgeLessThan
+GreaterThan	findByAgeGreaterThan
+After ==>	findByStartDateAfter
+Before ==>	findByStartDateBefore
+IsNull ==>	findByAgeIsNull
+IsNotNull,NotNull ==> 	findByAge(Is)NotNull
+Like ==>	findByFirstnameLike
+NotLike	==>	findByFirstnameNotLike
+StartingWith ==>	findByFirstnameStartingWith
+EndingWith ==>	findByFirstnameEndingWith
+     */
+
     /**
      * 10% Query("...")
      * HQL = Hibernate Query Language

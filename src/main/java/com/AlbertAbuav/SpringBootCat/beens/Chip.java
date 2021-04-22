@@ -5,10 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -21,4 +18,8 @@ public class Chip {
     private int id;
 
     private final String code = UUID.randomUUID().toString();
+
+    //    @ManyToOne
+//    @JoinColumn(name = "cat_id")
+//    private Cat catDetails;
 }
