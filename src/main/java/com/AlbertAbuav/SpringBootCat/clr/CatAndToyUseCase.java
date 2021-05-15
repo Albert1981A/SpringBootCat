@@ -28,8 +28,8 @@ public class CatAndToyUseCase implements CommandLineRunner {
         System.out.println();
         System.out.println(ArtUtils.CatAndToyUseCase);
 
-        Toy t1 = new Toy("Ball");
-        Toy t2 = new Toy("Muse");
+        Toy t1 = new Toy("Toy Ball");
+        Toy t2 = new Toy("Toy Muse");
 
         toyRepository.save(t1);
         toyRepository.save(t2);
